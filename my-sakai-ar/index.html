@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>堺観光ARアプリ - Sakai Tourism AR App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. 固定ヘッダー ==================== -->
+  <header class="app-header">
+    <div class="header-title">
+      <h1>堺観光ARアプリ</h1>
+      <span>Sakai Tourism AR App</span>
+    </div>
+    <button class="hamburger-btn" id="open-menu-btn" aria-label="メニューを開く">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+  <!-- ==================== 2. 右からスライドするサイドメニュー ==================== -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <nav class="drawer-menu" id="drawer-menu">
+    <button class="close-btn" id="close-menu-btn" aria-label="メニューを閉じる">✕</button>
+    <ul class="drawer-nav-list">
+      <li><a href="camera.html">カメラ起動</a></li>
+      <li><a href="collection.html">図鑑</a></li>
+      <li><a href="search.html">観光解説</a></li>
+      <li><a href="announce.html">お知らせ</a></li>
+      <li><a href="news.html">ニュース</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== 3. メインコンテンツエリア ==================== -->
+  <main class="main-content">
+
+    <!-- A. 上部 観光地画像自動スライダー -->
+    <section class="hero-slider-section">
+      <div class="slider-container" id="hero-slider">
+        <!-- JSで画像とタイトルが動的に挿入されます -->
+      </div>
+      <div class="slider-dots" id="slider-dots">
+        <!-- JSでドットインジケーターが自動生成されます -->
+      </div>
+    </section>
+
+    <!-- B. お知らせ セクション -->
+    <section class="content-section">
+      <a href="announce.html" class="section-badge-link">
+        <div class="section-badge">
+          <span class="badge-ja">お知らせ</span>
+          <span class="badge-en">Announcements</span>
+        </div>
+      </a>
+      <div class="horizontal-scroll-container" id="announce-list">
+        <!-- JSでカードが生成されます -->
+      </div>
+    </section>
+
+    <!-- C. ニュース セクション -->
+    <section class="content-section">
+      <a href="news.html" class="section-badge-link">
+        <div class="section-badge">
+          <span class="badge-ja">ニュース</span>
+          <span class="badge-en">News</span>
+        </div>
+      </a>
+      <div class="horizontal-scroll-container" id="news-list">
+        <!-- JSでカードが生成されます -->
+      </div>
+    </section>
+
+    <!-- D. お問い合わせ セクション -->
+    <section class="content-section">
+      <a href="contact.html" class="section-badge-link">
+        <div class="section-badge">
+          <span class="badge-ja">お問い合わせ</span>
+          <span class="badge-en">Contact Us</span>
+        </div>
+      </a>
+      <div class="horizontal-scroll-container" id="contact-list">
+        <!-- JSでカードが生成されます -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 4. 下部固定ナビゲーションバー ==================== -->
+  <nav class="bottom-nav">
+    <a href="search.html" class="bottom-nav-btn nav-left">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <div class="nav-label-box">
+        <span class="nav-label-ja">観光解説</span>
+        <span class="nav-label-en">Visual Search</span>
+      </div>
+    </a>
+
+    <!-- 中央の大きなカメラ起動ボタン -->
+    <a href="camera.html" class="bottom-nav-btn nav-center-camera" aria-label="カメラ起動">
+      <div class="camera-icon-wrapper">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+      </div>
+    </a>
+
+    <a href="collection.html" class="bottom-nav-btn nav-right">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="10" x2="16" y2="10"></line></svg>
+      <div class="nav-label-box">
+        <span class="nav-label-ja">図鑑</span>
+        <span class="nav-label-en">Collection</span>
+      </div>
+    </a>
+  </nav>
+
+  <!-- JS読み込み -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
