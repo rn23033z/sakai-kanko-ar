@@ -17,7 +17,7 @@ const HERO_SLIDES = [
   {
     title: '旧堺燈台',
     imageUrl: 'https://rn23033z.github.io/sakai-kanko-ar/my-sakai-ar/image/sakaitodai.jpg'
-  }
+  },
   {
     title: '鉄砲鍛冶屋敷',
     imageUrl: 'https://rn23033z.github.io/sakai-kanko-ar/my-sakai-ar/image/teppo.jpg'
